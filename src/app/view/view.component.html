@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 m-5">
+            <div class="row">
+                <h1 class="text-secondary text-center">View News</h1>
+                <hr>
+                <div *ngFor="let i of data.articles" class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4 mt-3 g-3">
+                    <div  class="card">
+                        <div class="card-body">
+                            <div class="card-header mb-3">
+                                <h6 class="fw-bold text-primary">{{i.source.name}}</h6>
+                                <p>Published on:{{i.publishedAt}}</p>
+                                <hr>
+                                <h5 class="card-title mb-2 text-danger">{{i.title}} <h6 class="text-dark fw-bold mb-3">- {{i.author}}</h6></h5>
+                            </div>
+                            <img src="{{i.urlToImage}}" class="card-img-top mb-3" alt="...">
+                            <h6 class="card-subtitle mb-2 fw-bold ">{{i.description}}</h6>
+                            
+                          <p class="card-text">{{i.content}}</p>
+                          <a href="{{i.url}}" class="card-link">Know more...</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
